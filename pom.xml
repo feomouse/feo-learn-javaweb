@@ -1,0 +1,248 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>feo</groupId>
+  <artifactId>springmvc-feo</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>springmvc-feo Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+  	<dependency>
+  	    <groupId>org.junit.jupiter</groupId>
+  	    <artifactId>junit-jupiter-api</artifactId>
+  	    <version>5.5.2</version>
+  	    <scope>test</scope>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+  	<dependency>
+  	    <groupId>org.junit.jupiter</groupId>
+  	    <artifactId>junit-jupiter-engine</artifactId>
+  	    <version>5.5.2</version>
+  	    <scope>test</scope>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+  	<dependency>
+  	    <groupId>org.junit.jupiter</groupId>
+  	    <artifactId>junit-jupiter-params</artifactId>
+  	    <version>5.5.2</version>
+  	    <scope>test</scope>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+  	<dependency>
+  	    <groupId>org.junit.jupiter</groupId>
+  	    <artifactId>junit-jupiter</artifactId>
+  	    <version>5.5.2</version>
+  	    <scope>test</scope>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+  	<dependency>
+  	    <groupId>org.springframework</groupId>
+  	    <artifactId>spring-core</artifactId>
+  	    <version>5.2.0.RELEASE</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+  	<dependency>
+  	    <groupId>org.springframework</groupId>
+  	    <artifactId>spring-context</artifactId>
+  	    <version>5.2.0.RELEASE</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+  	<dependency>
+  	    <groupId>org.springframework</groupId>
+  	    <artifactId>spring-beans</artifactId>
+  	    <version>5.2.0.RELEASE</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+  	<dependency>
+  	    <groupId>org.springframework</groupId>
+  	    <artifactId>spring-web</artifactId>
+  	    <version>5.2.0.RELEASE</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+  	<dependency>
+  	    <groupId>org.springframework</groupId>
+  	    <artifactId>spring-webmvc</artifactId>
+  	    <version>5.2.0.RELEASE</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+  	<dependency>
+  	    <groupId>org.springframework</groupId>
+  	    <artifactId>spring-aop</artifactId>
+  	    <version>5.2.0.RELEASE</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+  	<dependency>
+  	    <groupId>org.hibernate</groupId>
+  	    <artifactId>hibernate-core</artifactId>
+  	    <version>6.0.0.Alpha2</version>
+  	    <type>pom</type>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
+  	<dependency>
+  	    <groupId>org.hibernate</groupId>
+  	    <artifactId>hibernate-ehcache</artifactId>
+  	    <version>5.4.6.Final</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
+  	<dependency>
+  	    <groupId>org.hibernate.javax.persistence</groupId>
+  	    <artifactId>hibernate-jpa-2.1-api</artifactId>
+  	    <version>1.0.2.Final</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+  	<dependency>
+  	    <groupId>mysql</groupId>
+  	    <artifactId>mysql-connector-java</artifactId>
+  	    <version>8.0.17</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+  	<dependency>
+  	    <groupId>com.fasterxml.jackson.core</groupId>
+  	    <artifactId>jackson-databind</artifactId>
+  	    <version>2.10.0</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+  	<dependency>
+  	    <groupId>com.fasterxml.jackson.core</groupId>
+  	    <artifactId>jackson-core</artifactId>
+  	    <version>2.10.0</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+  	<dependency>
+  	    <groupId>com.fasterxml.jackson.core</groupId>
+  	    <artifactId>jackson-annotations</artifactId>
+  	    <version>2.10.0</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+  	<dependency>
+  	    <groupId>org.mybatis</groupId>
+  	    <artifactId>mybatis</artifactId>
+  	    <version>3.5.2</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+  	<dependency>
+  	    <groupId>org.mybatis</groupId>
+  	    <artifactId>mybatis-spring</artifactId>
+  	    <version>2.0.2</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+  	<dependency>
+  	    <groupId>org.apache.struts</groupId>
+  	    <artifactId>struts2-core</artifactId>
+  	    <version>2.5.20</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-convention-plugin -->
+  	<dependency>
+  	    <groupId>org.apache.struts</groupId>
+  	    <artifactId>struts2-convention-plugin</artifactId>
+  	    <version>2.5.20</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin -->
+  	<dependency>
+  	    <groupId>org.apache.struts</groupId>
+  	    <artifactId>struts2-spring-plugin</artifactId>
+  	    <version>2.5.20</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
+  	<dependency>
+  	    <groupId>org.apache.struts</groupId>
+  	    <artifactId>struts2-json-plugin</artifactId>
+  	    <version>2.5.20</version>
+  	</dependency>
+    <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>6.0.17.Final</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator-cdi</artifactId>
+        <version>6.0.17.Final</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/javax.el/javax.el-api -->
+    <dependency>
+        <groupId>javax.el</groupId>
+        <artifactId>javax.el-api</artifactId>
+        <version>3.0.1-b06</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>springmvc-feo</finalName>
+	<plugins>
+		<plugin>
+		   <groupId>org.codehaus.cargo</groupId>
+		   <artifactId>cargo-maven2-plugin</artifactId>
+		   <version>1.7.7</version>
+		   <configuration>
+				<wait>true</wait>
+				<container>
+					<containerId>tomcat7x</containerId><type>installed</type>
+					<home>F:\apache-tomcat-7.0.96-windows-x64\apache-tomcat-7.0.96</home>
+				</container>
+				<configuration>
+					<type>existing</type>
+					<home>F:\apache-tomcat-7.0.96-windows-x64\apache-tomcat-7.0.96</home>
+				</configuration>
+				<!-- 
+				<deployables>
+					<deployable>
+						<groupId>feo</groupId>
+						<artifactId>springmvc-feo</artifactId>
+						<type>war</type>
+						<properties>
+							<context>feoSpringMvcDemo</context>
+						</properties>
+					</deployable>
+				</deployables>
+				<deployer>
+					<type>installed</type>
+				</deployer>
+				 -->
+		   </configuration>
+			<executions>
+			    <!-- 
+				<execution>
+					<id>verify-deployer</id>
+					<phase>install</phase>
+					<goals>
+						<goal>deployer-deploy</goal>
+					</goals>
+				</execution>
+				<execution>
+					<id>clean-deployer</id>
+					<phase>clean</phase>
+					<goals>
+					<goal>deployer-undeploy</goal>
+					</goals>
+				</execution>
+			    -->
+				<execution>
+					<id>cargo-run</id>
+					<phase>install</phase>
+					<goals>
+						<goal>run</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.1</version>
+			<configuration>
+				<source>1.5</source>
+				<target>1.5</target>
+			</configuration>
+		</plugin>
+    </plugins>
+  </build>
+</project>
