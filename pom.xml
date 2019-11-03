@@ -78,6 +78,18 @@
   	    <artifactId>spring-aop</artifactId>
   	    <version>5.2.0.RELEASE</version>
   	</dependency>
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>1.9.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjrt</artifactId>
+        <version>1.9.4</version>
+    </dependency>
   	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
   	<dependency>
   	    <groupId>org.hibernate</groupId>
@@ -162,7 +174,6 @@
         <artifactId>hibernate-validator</artifactId>
         <version>6.0.17.Final</version>
     </dependency>
-
     <dependency>
         <groupId>org.hibernate.validator</groupId>
         <artifactId>hibernate-validator-cdi</artifactId>
@@ -174,75 +185,58 @@
         <artifactId>javax.el-api</artifactId>
         <version>3.0.1-b06</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.12.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.12.1</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>springmvc-feo</finalName>
-	<plugins>
-		<plugin>
-		   <groupId>org.codehaus.cargo</groupId>
-		   <artifactId>cargo-maven2-plugin</artifactId>
-		   <version>1.7.7</version>
-		   <configuration>
-				<wait>true</wait>
-				<container>
-					<containerId>tomcat7x</containerId><type>installed</type>
-					<home>F:\apache-tomcat-7.0.96-windows-x64\apache-tomcat-7.0.96</home>
-				</container>
-				<configuration>
-					<type>existing</type>
-					<home>F:\apache-tomcat-7.0.96-windows-x64\apache-tomcat-7.0.96</home>
-				</configuration>
-				<!-- 
-				<deployables>
-					<deployable>
-						<groupId>feo</groupId>
-						<artifactId>springmvc-feo</artifactId>
-						<type>war</type>
-						<properties>
-							<context>feoSpringMvcDemo</context>
-						</properties>
-					</deployable>
-				</deployables>
-				<deployer>
-					<type>installed</type>
-				</deployer>
-				 -->
-		   </configuration>
-			<executions>
-			    <!-- 
-				<execution>
-					<id>verify-deployer</id>
-					<phase>install</phase>
-					<goals>
-						<goal>deployer-deploy</goal>
-					</goals>
-				</execution>
-				<execution>
-					<id>clean-deployer</id>
-					<phase>clean</phase>
-					<goals>
-					<goal>deployer-undeploy</goal>
-					</goals>
-				</execution>
-			    -->
-				<execution>
-					<id>cargo-run</id>
-					<phase>install</phase>
-					<goals>
-						<goal>run</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.8.1</version>
-			<configuration>
-				<source>1.5</source>
-				<target>1.5</target>
-			</configuration>
-		</plugin>
+    <plugins>
+  		<plugin>
+  		   <groupId>org.codehaus.cargo</groupId>
+  		   <artifactId>cargo-maven2-plugin</artifactId>
+  		   <version>1.7.7</version>
+  		   <configuration>
+  				<wait>true</wait>
+  				<container>
+  					<containerId>tomcat7x</containerId><type>installed</type>
+  					<home>F:\apache-tomcat-7.0.96-windows-x64\apache-tomcat-7.0.96</home>
+  				</container>
+  				<configuration>
+  					<type>existing</type>
+  					<home>F:\apache-tomcat-7.0.96-windows-x64\apache-tomcat-7.0.96</home>
+  				</configuration>
+  		   </configuration>
+  			<executions>
+  				<execution>
+  					<id>cargo-run</id>
+  					<phase>install</phase>
+  					<goals>
+  						<goal>run</goal>
+  					</goals>
+  				</execution>
+  			</executions>
+  		</plugin>
+      <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>2.7</version>
+      </plugin>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>3.8.1</version>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+  		</plugin>
     </plugins>
   </build>
 </project>
